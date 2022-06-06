@@ -7,7 +7,7 @@ const Navbar = () => {
     <div>
       <div className="navbar-container">
         <div className="navbar-name">
-          <h3>The Coffee House</h3>
+          <p>Phố Mới Coffee</p>
         </div>
 
         <div className="navbar-search">
@@ -15,7 +15,7 @@ const Navbar = () => {
             <img src={logo} />
           </div>
           <div className="enter-address">
-            <h4>Giao hàng</h4>
+            <p>Giao hàng</p>
             <p>Tại: Nhập địa chỉ giao hàng</p>
           </div>
         </div>

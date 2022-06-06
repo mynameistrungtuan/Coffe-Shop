@@ -1,4 +1,4 @@
-export const data = [
+const data = [
   {
     id: 1,
     img: "https://minio.thecoffeehouse.com/image/admin/1653274559_dau-tay-man-muoi-aloe-vera_400x400.jpg",
@@ -180,3 +180,5 @@ export const data = [
     price: 45000,
   },
 ];
+
+export default data;

@@ -4,6 +4,7 @@
   position: relative;
   border-radius: 12px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: 10px 35px;
 
   .card-img {
     position: absolute;
@@ -36,6 +37,7 @@
     bottom: 0;
     display: flex;
     margin: auto 0;
+    
 
     p {
         position: absolute;
