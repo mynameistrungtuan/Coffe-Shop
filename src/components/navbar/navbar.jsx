@@ -1,13 +1,27 @@
-import React from "react";
+import { useState } from "react";
 import logo from "../../assets/images/logo.png";
 import "./navbar.scss";
+import { useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const navigation = useNavigate();
+  const [search, setSearch] = useState("");
+
+  const handleSearch = () => {
+    props.findSearch(search);
+  };
+
   return (
     <div>
       <div className="navbar-container">
         <div className="navbar-name">
-          <p>Phố Mới Coffee</p>
+          <p
+            onClick={() => {
+              navigation("/");
+            }}
+          >
+            Phố Mới Coffee
+          </p>
         </div>
 
         <div className="navbar-search">
@@ -15,18 +29,45 @@ const Navbar = () => {
             <img src={logo} />
           </div>
           <div className="enter-address">
-            <p>Giao hàng</p>
-            <p>Tại: Nhập địa chỉ giao hàng</p>
+            <input
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+              }}
+              type="text"
+              placeholder="Tìm kiếm...................  "
+            />
+            <i
+              class="fa-solid fa-magnifying-glass icon-search"
+              onClick={handleSearch}
+            ></i>
           </div>
         </div>
 
         <div className="navbar-options">
           <ul>
-            <li><a href="">Đặt hàng</a></li>
-            <li><a href="">Tin tức</a></li>
-            <li><a href="">Cửa hàng</a></li>
-            <li><a href="">Khuyến mãi</a></li>
-            <li><a href="">Tuyển dụng</a></li>
+            <li>
+              <a href="">Đặt hàng</a>
+            </li>
+            <li>
+              <a
+                href=""
+                onClick={() => {
+                  navigation("/news");
+                }}
+              >
+                Tin tức
+              </a>
+            </li>
+            <li>
+              <a href="">Cửa hàng</a>
+            </li>
+            <li>
+              <a href="">Khuyến mãi</a>
+            </li>
+            <li>
+              <a href="">Tuyển dụng</a>
+            </li>
           </ul>
         </div>
 

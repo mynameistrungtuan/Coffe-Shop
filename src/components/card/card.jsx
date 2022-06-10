@@ -7,7 +7,7 @@ const Card = ({dataCard}) => {
         <div>
             <div className="card-container">
                 <div className="card-img">
-                    <img src={dataCard.img} />
+                    <img src={dataCard.img}/>
                 </div>
 
                 <div className="card-name">
